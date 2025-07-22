@@ -1,7 +1,10 @@
 #include <iostream>
 using namespace std;
-
 int main(){
-    cout << "Day 9 C++ exercises" << endl;
+    int x;
+    int *ptr;
+    x=7;
+    ptr=&x;
+    cout<<*ptr;
     return 0;
 }
