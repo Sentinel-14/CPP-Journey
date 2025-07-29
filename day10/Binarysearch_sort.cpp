@@ -9,7 +9,7 @@ Space Complexity: O(1)
 #include <algorithm>  // For sort() function
 using namespace std;
 
-// Method 1: Bubble Sort with detailed explanation
+// Method 1: Bubble Sort (Manual Implementation)
 void bubbleSort(int arr[], int n) {
     for(int i = 0; i < n-1; i++) {
         for(int j = 0; j < n-i-1; j++) {
@@ -18,19 +18,9 @@ void bubbleSort(int arr[], int n) {
                 int temp = arr[j];
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
-                swapped = true;
             }
         }
-        
-        printArray(arr, n);
-        
-        // If no swapping happened, array is already sorted
-        if(!swapped) {
-            cout << "No swaps needed - array is sorted!" << endl;
-            break;
-        }
     }
-    cout << "Sorting complete!" << endl;
 }
 
 // Method 2: Selection Sort (Manual Implementation)
@@ -63,16 +53,16 @@ int binarySearch(int arr[], int n, int key) {
     int end = n - 1;
     
     while(start <= end) {
-        int mid = start + (end - start) / 2;
-        
+        int mid = (end + start) / 2;
+ 
         if(arr[mid] == key) {
             return mid;
         }
         else if(arr[mid] < key) {
-            start = mid + 1;
+            start = mid + 1;      //second half
         }
         else {
-            end = mid - 1;
+            end = mid - 1;      //first half
         }
     }
     return -1;
@@ -119,4 +109,4 @@ int main() {
     }
     
     return 0;
-}
+} 
