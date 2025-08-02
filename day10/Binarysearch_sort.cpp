@@ -39,6 +39,20 @@ void selectionSort(int arr[], int n) {
     }
 }
 
+//Method 3: Insertion sort
+void Insertionsort(int arr[],int n){
+    for(int i=1;i<n;i++){
+        int key=arr[i];
+        int j=i-1;
+        while((j>=0)&&arr[j]>key){  // Fixed: j>=0 instead of j>0
+            arr[j+1] = arr[j];      // Fixed: shift elements right
+            j--;
+        }
+        arr[j+1] = key;             // Fixed: place key in correct position
+    }
+}
+
+
 // Function to print array
 void printArray(int arr[], int n) {
     for(int i = 0; i < n; i++) {
@@ -74,7 +88,9 @@ int main() {
     // Unsorted array
     int arr1[] = {64, 34, 25, 12, 22, 11, 90};
     int arr2[] = {64, 34, 25, 12, 22, 11, 90};
-    int arr3[] = {64, 34, 25, 12, 22, 11, 90};
+    int arr3[]={64, 34, 25, 12, 22, 11, 90};
+    int arr4[] = {64, 34, 25, 12, 22, 11, 90};
+
     int n = 7;
     
     cout << "Original array: ";
@@ -91,12 +107,19 @@ int main() {
     selectionSort(arr2, n);
     cout << "Sorted array: ";
     printArray(arr2, n);
+
+    // Method 3:Insertion sort
+    Insertionsort(arr3,n);
+    printArray(arr3,n);
+
+
     
-    // Method 3: Built-in sort() function
+    // Method 4: Built-in sort() function
     cout << "\n--- Method 3: Built-in sort() ---" << endl;
-    sort(arr3, arr3 + n);  // Most efficient!
+    sort(arr4, arr4 + n);  // Most efficient!
     cout << "Sorted array: ";
-    printArray(arr3, n);
+    printArray(arr4, n);
+
     
     // Now test binary search on sorted array
     cout << "\n--- Binary Search Test ---" << endl;
@@ -109,4 +132,4 @@ int main() {
     }
     
     return 0;
-} 
+}
