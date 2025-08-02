@@ -17,7 +17,7 @@ void maxprofit(int prices[],int n){
     }
     cout<<"Maximum profit is:"<<maxprofit<<endl;
 }
-
+//
 
 
 int main(){
