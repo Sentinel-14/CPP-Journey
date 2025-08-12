@@ -59,7 +59,7 @@ Purpose: Reference guide for C-style string manipulation functions
    - Purpose: Finds first occurrence of substring in string
    - Syntax: char* strstr(const char* haystack, const char* needle)
    - Returns: Pointer to first occurrence or NULL if not found
-   - Example: strstr("Hello World", "World") returns pointer to "World"
+   - Example: strstr("Hello World", "World") returns pointer to "World".
 
 ===============================================================================
                               ADVANCED FUNCTIONS
