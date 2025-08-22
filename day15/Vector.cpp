@@ -37,5 +37,6 @@ int main() {
     vec.push_back(20);
     std::cout << "First element: " << vec[0] <<","<<vec[1]<< std::endl;
     vec.pop_back();
+    std::cout << "After pop_back, first element: " << vec[0] << std::endl;
     return 0;
 }
