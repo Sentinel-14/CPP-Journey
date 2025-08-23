@@ -1,4 +1,4 @@
-//Count set bits
+//Count set bits means total no. of 1 in the given binary form;
 #include <iostream>
 using namespace std;
 int count(int num){
