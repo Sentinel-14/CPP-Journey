@@ -62,5 +62,9 @@
     "vector": "cpp",
     "string": "cpp",
     "format": "cpp"
-  }
+  },
+  "explorer.openEditors.sortOrder": "editorOrder",
+  "explorer.sortOrder": "modified",
+  "explorer.sortOrderLexicographicOptions": "default",
+  "search.sortOrder": "modified"
 }
