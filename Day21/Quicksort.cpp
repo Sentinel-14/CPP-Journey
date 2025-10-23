@@ -38,3 +38,5 @@ int main(){
     printarray(arr,n);
     return 0;
 }
+
+//The worst case time complexity of this method (n^2) occurs when repeatedly smallest or the largest element of the array becomes the pivot.
