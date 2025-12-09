@@ -52,12 +52,13 @@ bool validatePassword(const string& password) {
     }
     
     bool hasUpper = false, hasLower = false, hasDigit = false, hasSpecial = false;
+    string specialChars = "!@#$%^&*()_+-=[]{}|;:',.<>?/~`";
     
     for (char c : password) {
         if (isupper(c)) hasUpper = true;
         else if (islower(c)) hasLower = true;
         else if (isdigit(c)) hasDigit = true;
-        else hasSpecial = true;
+        else if (specialChars.find(c) != string::npos) hasSpecial = true;
     }
     
     if (!hasUpper) {
