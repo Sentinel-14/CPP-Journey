@@ -1,0 +1,29 @@
+# Compiled binaries
+*.exe
+*.out
+a.out
+LoginFormValidation
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Visual Studio Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Backup files
+*~
+*.swp
+*.swo
